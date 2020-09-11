@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Unit Test Class Template</Title>
+			<Shortcut>utst</Shortcut>
+			<Description>Code snippet for the test class of NUnit</Description>
+			<Author>p1eXu5</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Part of the name for the test and test cases class.</ToolTip>
+					<Default>name</Default>
+				</Literal>
+				<Literal>
+					<ID>unit</ID>
+					<ToolTip>Part of the name for the test case.</ToolTip>
+					<Default>unit</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp" Kind="type"><![CDATA[
+		class $name$TestCases
+		{
+			public static IEnumerable TestCases()
+			{
+				yield return new TestCaseData( 1 ).Returns( 3 );
+			}
+		}
+
+		[ TestFixture ]
+		public class $name$Tests
+		{
+			#region SetUp and TearDown
+			[ SetUp ]
+			public void SetUp() { }
+
+			[ TearDown ]
+			public void TearDown() { } 
+			#endregion
+
+
+			[ TestCaseSource(typeof( $name$TestCases ), nameof( $name$TestCases.TestCases ) ) ]
+			public int $unit$_ByDefault_ReturnsExpected( int x )
+			{
+				$end$
+				return -1;
+			}
+
+			#region factory
+			// Insert factory methods here:
+
+			#endregion
+
+			#region types
+			// Insert fake types here:
+
+			#endregion
+		}
+			]]>
+				
+			</Code>
+			<Imports>
+				<Import>
+					<Namespace>NUnit.Framework</Namespace>
+				</Import>
+				<Import>
+					<Namespace>System.Collections</Namespace>
+				</Import>
+			</Imports>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

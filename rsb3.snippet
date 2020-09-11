@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Return StringBuilder With Three Arguments</Title>
+			<Shortcut>rsb3</Shortcut>
+			<Description>Code snippet for the ToString override return</Description>
+			<Author>p1eXu5</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>text1</ID>
+					<ToolTip>Identifier that represents the part of class, property maybe.</ToolTip>
+					<Default>"declaration"</Default>
+				</Literal>
+				<Object>
+					<ID>append1</ID>
+					<ToolTip>Identifier that represents the part of class, property maybe.</ToolTip>
+					<Default>item1</Default>
+				</Object>
+				<Literal>
+					<ID>text2</ID>
+					<ToolTip>Identifier that represents the part of class, property maybe.</ToolTip>
+					<Default>"declaration"</Default>
+				</Literal>
+				<Object>
+					<ID>append2</ID>
+					<ToolTip>Identifier that represents the part of class, property maybe.</ToolTip>
+					<Default>item2</Default>
+				</Object>
+				<Literal>
+					<ID>text3</ID>
+					<ToolTip>Identifier that represents the part of class, property maybe.</ToolTip>
+					<Default>"declaration"</Default>
+				</Literal>
+				<Object>
+					<ID>append3</ID>
+					<ToolTip>Identifier that represents the part of class, property maybe.</ToolTip>
+					<Default>item3</Default>
+				</Object>
+			</Declarations>
+			<Code Language="csharp" Kind="method body"><![CDATA[$end$new StringBuilder().Append( $text1$ ).Append( $append1$ ).Append("\n")
+										   .Append( $text2$ ).Append( $append2$ ).Append("\n")
+										   .Append( $text3$ ).Append( $append3$ )
+										   .ToString();]]>
+				
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

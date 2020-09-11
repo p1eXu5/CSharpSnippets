@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Inserts Unity region set</Title>
+			<Shortcut>urgn</Shortcut>
+			<Description>Inserts region set into mono behaviour class</Description>
+			<Author>p1eXu5</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+        <Literal>
+					<ID>properties</ID>
+					<ToolTip>Properties region.</ToolTip>
+					<Default>properties</Default>
+				</Literal>
+				<Literal>
+					<ID>initialization</ID>
+					<ToolTip>Initialization region.</ToolTip>
+					<Default>initialization</Default>
+				</Literal>
+        <Literal>
+					<ID>activities</ID>
+					<ToolTip>Activities region.</ToolTip>
+					<Default>activities</Default>
+				</Literal>
+        <Literal>
+					<ID>methods</ID>
+					<ToolTip>Methods region.</ToolTip>
+					<Default>methods</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp" 
+			      Kind="method body">
+				  <![CDATA[$end$#region $properties$
+
+
+
+                  #endregion
+                  
+                  
+                  #region $initialization$
+                  
+                
+
+                  #endregion
+                  
+                  
+                  #region $activities$
+                  
+                
+                
+                  #endregion
+                  
+                  
+                  #region $methods$
+                  
+                
+                
+                  #endregion]]>
+				
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>MVVM Property</Title>
+			<Shortcut>pmvvm</Shortcut>
+			<Description>Code snippet for inserting MVVM property</Description>
+			<Author>p1eXu5</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Identifier that represents the property name.</ToolTip>
+					<Default>name</Default>
+				</Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Identifier that represents the property type.</ToolTip>
+          <Default>type</Default>
+        </Literal>
+				<Object>
+					<ID>field</ID>
+					<ToolTip>Identifier that represents the field.</ToolTip>
+					<Default>_filed</Default>
+				</Object>
+			</Declarations>
+			<Code Language="csharp" Kind="method body"><![CDATA[public $type$ $name$
+        {
+            get => $field$;
+            set {
+                $field$ = value;
+                OnPropertyChanged();
+            }
+        }
+        
+        $end$]]>
+      </Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

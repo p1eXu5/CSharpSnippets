@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Unit Test Class Template</Title>
+			<Shortcut>utstp</Shortcut>
+			<Description>Code snippet for the test class of NUnit (Problems)</Description>
+			<Author>p1eXu5</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Part of the name for the test and test cases class.</ToolTip>
+					<Default>name</Default>
+				</Literal>
+				<Literal>
+					<ID>unit</ID>
+					<ToolTip>Part of the name for the test case.</ToolTip>
+					<Default>unit</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp" Kind="type"><![CDATA[
+		[ TestFixture ]
+		public class $name$Tests
+		{
+			public static IEnumerable TestCases()
+			{
+				yield return new TestCaseData( 1 ).Returns( 3 );
+			}
+
+
+			[ TestCaseSource(typeof( $name$Tests ), nameof( $name$Tests.TestCases ) ) ]
+			public int $unit$_ByDefault_ReturnsExpected( int x )
+			{
+				$end$
+				return -1;
+			}
+
+            #region factory
+			// Insert factory methods here:
+
+			#endregion
+		}
+			]]>
+				
+			</Code>
+			<Imports>
+				<Import>
+					<Namespace>NUnit.Framework</Namespace>
+				</Import>
+				<Import>
+					<Namespace>System.Collections</Namespace>
+				</Import>
+			</Imports>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

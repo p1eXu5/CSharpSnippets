@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Inserts region set</Title>
+			<Shortcut>regn</Shortcut>
+			<Description>Inserts region set into class</Description>
+			<Author>p1eXu5</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>fields</ID>
+					<ToolTip>Fields region.</ToolTip>
+					<Default>Fields</Default>
+				</Literal>
+                <Literal>
+					<ID>ctor</ID>
+					<ToolTip>Ctor region.</ToolTip>
+					<Default>Ctor</Default>
+				</Literal>
+                <Literal>
+					<ID>properties</ID>
+					<ToolTip>Properties region.</ToolTip>
+					<Default>Properties</Default>
+				</Literal>
+                <Literal>
+					<ID>methods</ID>
+					<ToolTip>Methods region.</ToolTip>
+					<Default>Methods</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp" 
+			      Kind="method body">
+				  <![CDATA[$end$#region $fields$
+
+
+
+                  #endregion
+                  
+                  
+                  #region $ctor$
+                  
+                
+
+                  #endregion
+                  
+                  
+                  #region $properties$
+                  
+                
+                
+                  #endregion
+                  
+                  
+                  #region $methods$
+                  
+                
+                
+                  #endregion]]>
+				
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
