@@ -2,9 +2,9 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>Inserts region set</Title>
-			<Shortcut>regn</Shortcut>
-			<Description>Inserts region set into class</Description>
+			<Title>Inserts Unity region set</Title>
+			<Shortcut>rgns</Shortcut>
+			<Description>Inserts region set into mono behaviour class</Description>
 			<Author>p1eXu5</Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
@@ -12,44 +12,44 @@
 		</Header>
 		<Snippet>
 			<Declarations>
-				<Literal>
-					<ID>fields</ID>
-					<ToolTip>Fields region.</ToolTip>
-					<Default>Fields</Default>
-				</Literal>
-                <Literal>
-					<ID>ctor</ID>
-					<ToolTip>Ctor region.</ToolTip>
-					<Default>Ctor</Default>
-				</Literal>
-                <Literal>
+        <Literal>
 					<ID>properties</ID>
 					<ToolTip>Properties region.</ToolTip>
-					<Default>Properties</Default>
+					<Default>properties</Default>
 				</Literal>
-                <Literal>
+				<Literal>
+					<ID>initialization</ID>
+					<ToolTip>Initialization region.</ToolTip>
+					<Default>initialization</Default>
+				</Literal>
+        <Literal>
+					<ID>activities</ID>
+					<ToolTip>Activities region.</ToolTip>
+					<Default>activities</Default>
+				</Literal>
+        <Literal>
 					<ID>methods</ID>
 					<ToolTip>Methods region.</ToolTip>
-					<Default>Methods</Default>
+					<Default>methods</Default>
 				</Literal>
 			</Declarations>
 			<Code Language="csharp" 
 			      Kind="method body">
-				  <![CDATA[$end$#region $fields$
+				  <![CDATA[$end$#region $properties$
 
 
 
                   #endregion
                   
                   
-                  #region $ctor$
+                  #region $initialization$
                   
                 
 
                   #endregion
                   
                   
-                  #region $properties$
+                  #region $activities$
                   
                 
                 

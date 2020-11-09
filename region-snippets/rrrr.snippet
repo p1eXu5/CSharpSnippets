@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>rrrr</Title>
+			<Shortcut>#rrrr</Shortcut>
+			<Description>Region for ...</Description>
+			<Author>p1eXu5</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>name</ID>
+					<ToolTip>Region name</ToolTip>
+					<Default>name</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp"><![CDATA[#region $name$ $end$
+		$selected$
+	#endregion ----------------------------------------------------- $name$
+    ]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

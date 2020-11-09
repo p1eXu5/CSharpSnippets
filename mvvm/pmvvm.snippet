@@ -28,13 +28,13 @@
 					<Default>_filed</Default>
 				</Object>
 			</Declarations>
-			<Code Language="csharp" Kind="method body"><![CDATA[public $type$ $name$
+			<Code Language="csharp" Kind="method body"><![CDATA[
+		
+		private $type$ _$name$;
+		public $type$ $name$
         {
             get => $field$;
-            set {
-                $field$ = value;
-                OnPropertyChanged();
-            }
+            set => SetProperty( ref $field$, value );
         }
         
         $end$]]>
