@@ -13,28 +13,28 @@
 		<Snippet>
 			<Declarations>
 				<Literal>
-					<ID>name</ID>
+					<ID>PropertyName</ID>
 					<ToolTip>Identifier that represents the property name.</ToolTip>
-					<Default>name</Default>
+					<Default>PropertyName</Default>
 				</Literal>
-        <Literal>
-          <ID>type</ID>
-          <ToolTip>Identifier that represents the property type.</ToolTip>
-          <Default>type</Default>
-        </Literal>
-				<Object>
-					<ID>field</ID>
-					<ToolTip>Identifier that represents the field.</ToolTip>
-					<Default>_filed</Default>
-				</Object>
+				<Literal>
+					<ID>fieldName</ID>
+					<ToolTip>Identifier that represents the field name.</ToolTip>
+					<Default>fieldName</Default>
+				</Literal>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Identifier that represents the property type.</ToolTip>
+					<Default>type</Default>
+				</Literal>
 			</Declarations>
 			<Code Language="csharp" Kind="method body"><![CDATA[
 		
-		private $type$ _$name$;
-		public $type$ $name$
+		private $type$ $fieldName$;
+		public $type$ $PropertyName$
         {
-            get => $field$;
-            set => SetProperty( ref $field$, value );
+            get => $fieldName$;
+            set => SetProperty( ref $fieldName$, value );
         }
         
         $end$]]>

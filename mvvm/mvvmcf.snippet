@@ -2,7 +2,7 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>MVVM Delegate Command Factory</Title>
+			<Title>MVVM Delegate Command</Title>
 			<Shortcut>mvvmcf</Shortcut>
 			<Description>Code snippet for inserting MVVM property</Description>
 			<Author>p1eXu5</Author>
@@ -17,11 +17,17 @@
 					<ToolTip>Identifier that represents the property name.</ToolTip>
 					<Default>PropertyName</Default>
 				</Literal>
+				<Literal>
+					<ID>fieldName</ID>
+					<ToolTip>Identifier that represents the field name.</ToolTip>
+					<Default>fieldName</Default>
+				</Literal>
             </Declarations>
             <Code Language="csharp" Kind="method body"><![CDATA[
         #region $PropertyName$Command
 
-        public ICommand $PropertyName$Command => new DelegateCommand$end$( $PropertyName$, Can$PropertyName$ );
+		private ICommand? $fieldName$Command;
+        public ICommand $PropertyName$Command => $fieldName$Command ??= new DelegateCommand$end$( $PropertyName$, Can$PropertyName$ );
 		
         private void $PropertyName$()
             => throw new NotImplementedException();

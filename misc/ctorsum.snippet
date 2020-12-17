@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Constructor summary section</Title>
+			<Shortcut>ctorsum</Shortcut>
+			<Description>Constructor summary section</Description>
+			<Author>p1eXu5</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+            <Declarations>
+				<Literal>
+					<ID>class</ID>
+                    <Function>ClassName()</Function>
+					<ToolTip>Class name</ToolTip>
+					<Default>_</Default>
+				</Literal>
+			</Declarations>
+			<Code Language="csharp" Kind="type decl"><![CDATA[/// <summary>
+            /// Initializes a new instance of the $class$ class.$end$
+            /// </summary>]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
