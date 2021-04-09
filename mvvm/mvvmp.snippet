@@ -2,7 +2,7 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>MVVM Property</Title>
+			<Title>MVVM Prism Property</Title>
 			<Shortcut>mvvmp</Shortcut>
 			<Description>Code snippet for inserting MVVM property</Description>
 			<Author>p1eXu5</Author>
@@ -28,16 +28,20 @@
 					<Default>type</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp" Kind="method body"><![CDATA[
-		
+			<Code Language="CSharp"
+				  Kind="type decl"
+				  Delimiter="$"><![CDATA[
+		#region $PropertyName$ properties
+
 		private $type$ $fieldName$;
-		public $type$ $PropertyName$
+		public $type$ $start$$PropertyName$
         {
             get => $fieldName$;
             set => SetProperty( ref $fieldName$, value );
         }
-        
-        $end$]]>
+
+        #endregion ───────────────────────────────────────────────────── $PropertyName$ properties ─┘
+		$end$]]>
       </Code>
 		</Snippet>
 	</CodeSnippet>

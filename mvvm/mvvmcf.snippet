@@ -2,7 +2,7 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>MVVM Delegate Command</Title>
+			<Title>MVVM Delegate Command Flyweight</Title>
 			<Shortcut>mvvmcf</Shortcut>
 			<Description>Code snippet for inserting MVVM property</Description>
 			<Author>p1eXu5</Author>
@@ -13,9 +13,9 @@
 		<Snippet>
 			<Declarations>
 				<Literal>
-					<ID>PropertyName</ID>
+					<ID>CommandName</ID>
 					<ToolTip>Identifier that represents the property name.</ToolTip>
-					<Default>PropertyName</Default>
+					<Default>CommandName</Default>
 				</Literal>
 				<Literal>
 					<ID>fieldName</ID>
@@ -23,18 +23,21 @@
 					<Default>fieldName</Default>
 				</Literal>
             </Declarations>
-            <Code Language="csharp" Kind="method body"><![CDATA[
-        #region $PropertyName$Command
+            <Code Language="CSharp"
+				  Kind="type decl"
+				  Delimiter="$"><![CDATA[
+        #region $CommandName$Command
 
 		private ICommand? $fieldName$Command;
-        public ICommand $PropertyName$Command => $fieldName$Command ??= new DelegateCommand$end$( $PropertyName$, Can$PropertyName$ );
+        public ICommand $CommandName$Command => $fieldName$Command ??= new DelegateCommand$end$( $CommandName$, Can$CommandName$ );
 		
-        private void $PropertyName$()
+        private void $CommandName$()
             => throw new NotImplementedException();
 
-        private bool Can$PropertyName$()
+        private bool Can$CommandName$()
             => false;
-        #endregion ----------------------------------------------------- $PropertyName$Command]]>
+			
+        #endregion ───────────────────────────────────────────────────── $CommandName$Command ─┘]]>
             </Code>
 			<Imports>
 				<Import>

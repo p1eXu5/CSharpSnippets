@@ -3,7 +3,7 @@
 	<CodeSnippet Format="1.0.0">
 		<Header>
 			<Title>MVVM Delegate Command Factory</Title>
-			<Shortcut>mvvmcf</Shortcut>
+			<Shortcut>mvvmc</Shortcut>
 			<Description>Code snippet for inserting MVVM property</Description>
 			<Author>p1eXu5</Author>
 			<SnippetTypes>
@@ -13,22 +13,25 @@
 		<Snippet>
 			<Declarations>
 				<Literal>
-					<ID>PropertyName</ID>
+					<ID>CommandName</ID>
 					<ToolTip>Identifier that represents the property name.</ToolTip>
-					<Default>PropertyName</Default>
+					<Default>CommandName</Default>
 				</Literal>
             </Declarations>
-            <Code Language="csharp" Kind="method body"><![CDATA[
-        #region $PropertyName$Command
+            <Code Language="CSharp"
+				  Kind="type decl"
+				  Delimiter="$"><![CDATA[
+        #region $CommandName$Command
 
-        public ICommand $PropertyName$Command => new DelegateCommand$end$( $PropertyName$, Can$PropertyName$ );
+        public ICommand $CommandName$Command => new DelegateCommand$end$( $CommandName$, Can$CommandName$ );
 		
-        private void $PropertyName$()
+        private void $CommandName$()
             => throw new NotImplementedException();
 
-        private bool Can$PropertyName$()
+        private bool Can$CommandName$()
             => false;
-        #endregion ----------------------------------------------------- $PropertyName$Command]]>
+			
+        #endregion ───────────────────────────────────────────────────── $CommandName$Command ─┘]]>
             </Code>
 			<Imports>
 				<Import>

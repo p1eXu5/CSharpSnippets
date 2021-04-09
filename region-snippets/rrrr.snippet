@@ -4,7 +4,7 @@
 		<Header>
 			<Title>rrrr</Title>
 			<Shortcut>#rrrr</Shortcut>
-			<Description>Contrast region section.</Description>
+			<Description>Region section.</Description>
 			<Author>p1eXu5</Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
@@ -13,15 +13,19 @@
 		</Header>
 		<Snippet>
 			<Declarations>
-				<Literal>
+				<Literal Editable="true">
 					<ID>name</ID>
 					<ToolTip>Region name</ToolTip>
 					<Default>name</Default>
 				</Literal>
 			</Declarations>
-			<Code Language="csharp"><![CDATA[#region $name$$end$
-		$selected$
-	#endregion ----------------------------------------------------- $name$]]>
+			<Code Language="CSharp"
+				  Kind="any"
+				  Delimiter="$"><![CDATA[#region $name$
+
+		$selected$$end$
+		
+	#endregion ───────────────────────────────────────────────────── $name$ ─┘]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>
