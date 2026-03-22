@@ -2,9 +2,9 @@
 <CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>MVVM Prism Property</Title>
-			<Shortcut>mvvmp</Shortcut>
-			<Description>Code snippet for inserting MVVM property</Description>
+			<Title>MVVM Property (MAUI)</Title>
+			<Shortcut>mauip</Shortcut>
+			<Description>Code snippet for inserting MVVM property (MAUI)</Description>
 			<Author>p1eXu5</Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
@@ -31,14 +31,14 @@
 			<Code Language="CSharp"
 				  Kind="type decl"
 				  Delimiter="$"><![CDATA[
-		#region *** $PropertyName$ ***
+        #region *** $PropertyName$ ***
 
-		private $type$ $fieldName$;
-		
-		public $type$ $start$$PropertyName$
+        private $type$ $fieldName$;
+
+        public $type$ $start$$PropertyName$
         {
             get => $fieldName$;
-            set => SetProperty( ref $fieldName$, value );
+            set => SetProperty(ref $fieldName$, value);
         }
 
         #endregion

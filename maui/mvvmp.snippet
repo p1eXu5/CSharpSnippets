@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>MAUI Bindable Property</Title>
+            <Shortcut>propbp</Shortcut>
+            <Description>Code snippet for inserting MAUI bindable property</Description>
+            <Author>p1eXu5</Author>
+            <SnippetTypes>
+                <SnippetType>Expansion</SnippetType>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Declarations>
+                <Literal>
+                    <ID>PropertyName</ID>
+                    <ToolTip>Identifier that represents the property name.</ToolTip>
+                    <Default>PropertyName</Default>
+                </Literal>
+                <Literal>
+                    <ID>type</ID>
+                    <ToolTip>Identifier that represents the property type.</ToolTip>
+                    <Default>type</Default>
+                </Literal>
+                <Literal Editable="false">
+                    <ID>control</ID>
+                    <Function>ClassName()</Function>
+                    <Default>control</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp"
+                  Kind="type decl"
+                  Delimiter="$"><![CDATA[
+    #region $PropertyName$Property
+
+    public $type$ $start$$PropertyName$
+    {
+        get => ($type$)GetValue($PropertyName$Property);
+        set => SetValue($PropertyName$Property, value);
+    }
+
+    public static readonly BindableProperty $PropertyName$Property =
+        BindableProperty.Create(
+            nameof($PropertyName$),
+            typeof($type$),
+            typeof($control$),
+            default($type$),
+            BindingMode.TwoWay,
+            propertyChanged: On$PropertyName$PropertyChanged);
+
+    #endregion
+    $end$]]>
+      </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

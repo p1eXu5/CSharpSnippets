@@ -4,7 +4,7 @@
 		<Header>
 			<Title>rrrr</Title>
 			<Shortcut>#rrrr</Shortcut>
-			<Description>Region section.</Description>
+			<Description>Wraps selection into region.</Description>
 			<Author>p1eXu5</Author>
 			<SnippetTypes>
 				<SnippetType>Expansion</SnippetType>
@@ -21,9 +21,16 @@
 			</Declarations>
 			<Code Language="CSharp"
 				  Kind="any"
-				  Delimiter="$"><![CDATA[#region $name$
-		$selected$$end$
-	#endregion ───────────────────────────────────────────────────── $name$ ─┘]]>
+				  Delimiter="$"><![CDATA[//------------------------------------------------------
+	//
+	//  $name$
+	//
+	//------------------------------------------------------
+
+	#region $name$
+	$selected$$end$
+
+	#endregion $name$]]>
 			</Code>
 		</Snippet>
 	</CodeSnippet>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>MVVM Observable Property (MAUI)</Title>
+			<Shortcut>mauio</Shortcut>
+			<Description>Code snippet for inserting MVVM observable property</Description>
+			<Author>p1eXu5</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>ROCollectionName</ID>
+					<ToolTip>Identifier that represents the property name.</ToolTip>
+					<Default>ROCollectionName</Default>
+				</Literal>
+				<Literal>
+					<ID>collectionName</ID>
+					<ToolTip>Identifier that represents the observable collection field name.</ToolTip>
+					<Default>collectionName</Default>
+				</Literal>
+				<Literal>
+					<ID>collectionTypeName</ID>
+					<ToolTip>Identifier that represents the observable collection type name.</ToolTip>
+					<Default>collectionTypeName</Default>
+				</Literal>
+            </Declarations>
+            <Code Language="CSharp"
+				  Kind="type decl"
+				  Delimiter="$"><![CDATA[
+        #region *** $ROCollectionName$ ***
+
+        private readonly ObservableCollection<$collectionTypeName$> $collectionName$ = new();
+
+        public ReadOnlyObservableCollection<$collectionTypeName$> $ROCollectionName$ { get; }
+        $ROCollectionName$ = new($collectionName$);
+
+        #endregion]]>
+            </Code>
+			<Imports>
+				<Import>
+					<Namespace>System.Collections.ObjectModel</Namespace>
+				</Import>
+			</Imports>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
